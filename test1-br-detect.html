@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Navigator</h2>
+
+<p>TRYING TO DETECT BROWSER NAME</p>
+
+<p id="demo"></p>
+
+<p id="demo2"></p>
+
+<p id="demo3"></p>
+<script>
+document.getElementById("demo").innerHTML = 
+navigator.userAgent;
+
+// CHROME
+  if (navigator.userAgent.indexOf("Chrome") != -1 ) {
+    document.getElementById("demo3").innerHTML = "Browser is  Google Chrome";
+  }
+  // FIREFOX
+  else if (navigator.userAgent.indexOf("Firefox") != -1 ) {
+   document.getElementById("demo3").innerHTML = "Browser is  Mozilla Firefox";
+  }
+  // INTERNET EXPLORER
+  else if (navigator.userAgent.indexOf("MSIE") != -1 ) {
+    document.getElementById("demo3").innerHTML = "Browser is Internet Explorer";
+  }
+  // EDGE
+  else if (navigator.userAgent.indexOf("Trident") != -1 ) {
+    document.getElementById("demo3").innerHTML ="Browser is Internet Explorer";
+  }
+  // SAFARI
+  else if (navigator.userAgent.indexOf("Safari") != -1 ) {
+    document.getElementById("demo3").innerHTML ="Browser is Safari";
+  }
+  // OPERA
+  else if (navigator.userAgent.indexOf("Opera") != -1 ) {
+    document.getElementById("demo3").innerHTML ="Browser is  Opera";
+  }
+  // YANDEX BROWSER
+  else if (navigator.userAgent.indexOf("Opera") != -1 ) {
+    document.getElementById("demo3").innerHTML ="Browser is  YaBrowser";
+  }
+  // OTHERS
+  else {
+    document.getElementById("demo3").innerHTML ="Browser is  Others";
+  }
+</script>
+
+</body>
+</html>
