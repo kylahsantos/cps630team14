@@ -1,0 +1,208 @@
+/* drop down css menu and style */
+.parent {display: block;
+        position: relative;
+        float: left;line-height: 30px;background-color: #2C595B; border-right:#CCC 1px solid;}
+.parent a{margin: 10px;color: #FFFFFF;text-decoration: none;}
+.parent:hover > ul {display:block;position:absolute;}
+.child {display: none; width: auto;  height: auto;}
+.child li {display:inline-block;background-color: #E4EFF7;line-height: 30px;border-bottom:#CCC 1px solid;border-right:#CCC 1px solid; width: 150%;  height: auto;}
+.child li a{color: #000000;}
+ul {list-style: none;margin: 0;padding: 0px; min-width:10em;}
+ul ul ul{left: 100%; top: 0; margin-left:1px;}
+li:hover {background-color: #BAD1CD;}
+.parent li:hover {display:block;background-color: #F0F0F0;}
+.expand{font-size:12px;float:right;margin-right:5px;}
+a.nav-link {color: #2C595B;}
+
+.sc ul li:hover {background-color: none;}
+/* for all pages */
+body{
+background-color: #F6E9DB;
+color: #21282D;
+font-family: 'Muli', sans-serif;
+}
+
+h1{
+text-align: center;
+font-family: 'Muli', sans-serif;
+font-weight: bold;
+color: #2C595B;
+}
+
+h2{
+font-family: 'Muli', sans-serif;
+font-weight: bold;
+color: #2C595B;
+}
+/* Style the search box inside the navigation bar */
+.sb input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ .navigation {
+   background-color:#EAC4B3;
+ }
+
+#banner {
+  max-width: 25%;
+  height: auto;
+}
+
+/* for the modals - about/contact us */
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+#ontop {
+  z-index: 10; /* Sit on top */
+}
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* home page */
+#content-1 {
+  margin-left: 200px;
+  float: right;
+}
+
+.searchfunction {
+  display: none;
+}
+
+/*for the attractions*/
+#menutitle {
+      margin: 5px;
+}
+
+#menu {
+  position: absolute;
+        z-index: 1;
+}
+
+#mainimage{
+border-radius: 15px;
+object-fit: contain;
+width: 55%;
+height: 55%;
+}
+
+.closedistance{
+width:200px;
+height:200px;
+object-fit:cover;
+border-radius: 15px;
+visibility: visible;
+}
+
+.placesheader{
+background-color: #2C595B; /*#2C595B;*/
+border-radius: 10px;
+}
+
+.topother{
+background-color: #EAC4B3; /*#2C595B;*/
+padding-top: 25px;
+padding-left: 25px;
+padding-right: 25px;
+}
+.bottomother{
+background-color: #EAC4B3; /*#2C595B;*/
+padding-bottom: 25px;
+}
+
+/* read more page */
+img.readmore{
+width: 250px;
+height: 250px;
+object-fit: cover;
+border-radius: 20px;
+padding: 10px;
+}
+.col-sm-12{
+text-align:center;
+}
+.col-sm-4{
+border-radius: 20px;
+text-align: center;
+background-color: #2C595B;
+color: #BAD1CD;
+}
+
+p.head{
+font-weight: bold;
+padding-left: 10px;
+}
+
+.review{
+padding: 20px;
+background-color: #EAC4B3; /*#2C595B;*/
+color: #21282D;
+}
+
+p.description{
+padding: 45px;
+border-radius: 20px;
+text-align: center;
+background-color: #2C595B;
+color: #BAD1CD;
+
+}
+.review_text{
+padding: 20px;
+background-color: #ECCDBF;
+}
+
+/*shopping cart*/
+.basic{
+background-color: #FFFFFF;
+}
+.col.left{
+margin-left: 20px;
+overflow: auto;
+max-height: 400px;
+
+
+}
+.col.right{
+/*display: none;*/
+}
