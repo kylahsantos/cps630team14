@@ -4,15 +4,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta charset="utf-8">
       <title>Plan Your Travel</title>
-      <link rel="stylesheet" href="./style.css">
+      <link rel="stylesheet" href="style.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-      <script src="./script.js"></script>
+      <script src="script.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+
 
 <script>
 $(document).ready(function() {
@@ -53,6 +55,9 @@ font-family: 'Muli', sans-serif;
 </style>
 </head>
 <body>
+  <?php
+    session_start();
+    ?>
   <!-- WEBSITE BANNER -->
   <div class="container">
             <img class="center-block" id="banner" src="images/banner.png">
@@ -94,7 +99,7 @@ font-family: 'Muli', sans-serif;
     <nav class="navbar navbar-expand-sm justify-content-center navigation">
        <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="./home.php">Home</a>
+          <a class="nav-link" href="home.php">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" onClick="displayModal('about')">About Us</a>
@@ -103,7 +108,7 @@ font-family: 'Muli', sans-serif;
           <a class="nav-link" onClick="displayModal('contact')">Contact Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./shoppingcart.php">Shopping Cart</a>
+          <a class="nav-link" href="shoppingcart.php">Shopping Cart</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" data-container="#content-1">Search</a>
@@ -127,15 +132,15 @@ font-family: 'Muli', sans-serif;
                                       <li class="parent"><a href="">USA<span class="expand">➢</span></a>
                                               <ul class="child">
                                                       <li><b id='menutitle'>Attractions</b></li>
-                                                      <li><a href="./home.php?id=1">The Statue of Liberty</a></li>
-                                                      <li><a href="./home.php?id=2">Cloud Gate</a></li>
+                                                      <li><a href="home.php?id=1">The Statue of Liberty</a></li>
+                                                      <li><a href="home.php?id=2">Cloud Gate</a></li>
                                               </ul>
                                       </li>
                                       <li class="parent"><a href="">Canada<span class="expand">➢</span></a>
                                               <ul class="child">
                                                       <li><b id='menutitle'>Attractions</b></li>
-                                                      <li><a href="./home.php?id=3">CN Tower</a></li>
-                                                      <li><a href="./home.php?id=4">Niagara Falls</a></li>
+                                                      <li><a href="home.php?id=3">CN Tower</a></li>
+                                                      <li><a href="home.php?id=4">Niagara Falls</a></li>
                                               </ul>
                                       </li>
                               </ul>
@@ -148,15 +153,15 @@ font-family: 'Muli', sans-serif;
                                       <li class="parent"><a href="">Brazil<span class="expand">➢</span></a>
                                               <ul class="child">
                                                       <li><b id='menutitle'>Attractions</b></li>
-                                                      <li><a href="./home.php?id=5">Christ the Redeemer</a></li>
-                                                      <li><a href="./home.php?id=6">Sugarloaf Mountain</a></li>
+                                                      <li><a href="home.php?id=5">Christ the Redeemer</a></li>
+                                                      <li><a href="home.php?id=6">Sugarloaf Mountain</a></li>
                                               </ul>
                                       </li>
                                       <li class="parent"><a href="">Argentina<span class="expand">➢</span></a>
                                               <ul class="child">
                                                       <li><b id='menutitle'>Attractions</b></li>
-                                                      <li><a href="./home.php?id=7">Parque Nacional Los Glaciares</a></li>
-                                                      <li><a href="./home.php?id=8">Aconcagua</a></li>
+                                                      <li><a href="home.php?id=7">Parque Nacional Los Glaciares</a></li>
+                                                      <li><a href="home.php?id=8">Aconcagua</a></li>
                                               </ul>
                                       </li>
                               </ul>
@@ -169,15 +174,15 @@ font-family: 'Muli', sans-serif;
                                       <li class="parent"><a href="">France<span class="expand">➢</span></a>
                                               <ul class="child">
                                                       <li><b id='menutitle'>Attractions</b></li>
-                                                      <li><a href="./home.php?id=9">Eiffel Tower</a></li>
-                                                      <li><a href="./home.php?id=10">Louvre Museum</a></li>
+                                                      <li><a href="home.php?id=9">Eiffel Tower</a></li>
+                                                      <li><a href="home.php?id=10">Louvre Museum</a></li>
                                               </ul>
                                       </li>
                                       <li class="parent"><a href="">UK<span class="expand">➢</span></a>
                                               <ul class="child">
                                                       <li><b id='menutitle'>Attractions</b></li>
-                                                      <li><a href="./home.php?id=11">Big Ben</a></li>
-                                                      <li><a href="./home.php?id=12">Buckingham Place</a></li>
+                                                      <li><a href="home.php?id=11">Big Ben</a></li>
+                                                      <li><a href="home.php?id=12">Buckingham Place</a></li>
                                               </ul>
                                       </li>
                               </ul>
@@ -190,15 +195,15 @@ font-family: 'Muli', sans-serif;
                                       <li class="parent"><a href="">India<span class="expand">➢</span></a>
                                               <ul class="child">
                                                       <li><b id='menutitle'>Attractions</b></li>
-                                                      <li><a href="./home.php?id=13">Taj Mahal</a></li>
-                                                      <li><a href="./home.php?id=14">Gateway Of India Mumbai</a></li>
+                                                      <li><a href="home.php?id=13">Taj Mahal</a></li>
+                                                      <li><a href="home.php?id=14">Gateway Of India Mumbai</a></li>
                                               </ul>
                                       </li>
                                       <li class="parent"><a href="">Philippines<span class="expand">➢</span></a>
                                               <ul class="child">
                                                       <li><b id='menutitle'>Attractions</b></li>
-                                                      <li><a href="./home.php?id=15">Boracay</a></li>
-                                                      <li><a href="./home.php?id=16">Chocolate Hills</a></li>
+                                                      <li><a href="home.php?id=15">Boracay</a></li>
+                                                      <li><a href="home.php?id=16">Chocolate Hills</a></li>
                                               </ul>
                                       </li>
                               </ul>
@@ -211,15 +216,15 @@ font-family: 'Muli', sans-serif;
                                       <li class="parent"><a href="">South Africa<span class="expand">➢</span></a>
                                               <ul class="child">
                                                       <li><b id='menutitle'>Attractions</b></li>
-                                                      <li><a href="./home.php?id=17">Kruger National Park</a></li>
-                                                      <li><a href="./home.php?id=18">Cape of Good Hope</a></li>
+                                                      <li><a href="home.php?id=17">Kruger National Park</a></li>
+                                                      <li><a href="home.php?id=18">Cape of Good Hope</a></li>
                                               </ul>
                                       </li>
                                       <li class="parent"><a href="">Egypt<span class="expand">➢</span></a>
                                               <ul class="child">
                                                       <li><b id='menutitle'>Attractions</b></li>
-                                                      <li><a href="./home.php?id=19">Giza Necropolis</a></li>
-                                                      <li><a href="./home.php?id=20">Great Sphinx of Giza</a></li>
+                                                      <li><a href="home.php?id=19">Giza Necropolis</a></li>
+                                                      <li><a href="home.php?id=20">Great Sphinx of Giza</a></li>
                                               </ul>
                                       </li>
                               </ul>
@@ -227,16 +232,17 @@ font-family: 'Muli', sans-serif;
       </ul>
       <li class="parent"><a href="#">Popular Places</a>
               <ul class="child">
-                      <li><a href="./home.php?id=1">The Statue of Liberty</a></li>
-                      <li><a href="./home.php?id=5">Christ the Redeemer</a></li>
-                      <li><a href="./home.php?id=9">Eiffel Tower</a></li>
-                      <li><a href="./home.php?id=13">Taj Mahal</a></li>
-                      <li><a href="./home.php?id=19">Giza Necropolis</a></li>
+                      <li><a href="home.php?id=1">The Statue of Liberty</a></li>
+                      <li><a href="home.php?id=5">Christ the Redeemer</a></li>
+                      <li><a href="home.php?id=9">Eiffel Tower</a></li>
+                      <li><a href="home.php?id=13">Taj Mahal</a></li>
+                      <li><a href="home.php?id=19">Giza Necropolis</a></li>
               </ul>
     </ul>
   </div>
 
 <?php
+
 $id = '';
 if( isset( $_GET['id'])) {}
 else { //HOME PAGE ID = NONE
@@ -245,7 +251,7 @@ else { //HOME PAGE ID = NONE
   <div class = 'container searchdiv' >
   <div id='content-1'>
     <form action='' method='GET'>
-    <input class='sb' type='text' name='query' placeholder='Search..''>
+    <input class='sb' type='text' name='query' placeholder='Search..'/>
     <input type='submit' value='Search'/>
     </form></div>
   <br>
@@ -276,41 +282,43 @@ echo '
         <div class='row'>
           <div class='col-sm'></div>
           <div class='col-sm'></div>
-          <div class='col-sm' id = 'content'>";
-          $query = '';
+          ";
 }
-if( empty($_GET['query']) ) { }
-  elseif (isset( $_GET['query']))
+//START OF SEARCH FUNCTION
+if (isset( $_GET['query']))
   {
-      $query = $_GET['query'];
-      //connect to the DB
-      $user = 'root';
-      $pass = '';
-      $db = 'cps630';
-      $conn = mysqli_connect("localhost", $user, $pass, $db);
-      if (!$conn) {echo "failed to connect".mysqli_connect_error(); die; }
+      $_SESSION['search'] = $_GET['query'];
 
-      $sql  = "SELECT * FROM home WHERE placelocation LIKE '%" . $query ."%' OR placename LIKE '%" . $query ."%'";
-      $result = mysqli_query($conn, $sql);
-
-      if(mysqli_num_rows($result) > 0) {
-        while ($row = mysqli_fetch_array($result)) {
-          $link = './readmore.php?id=';
-          $link .= $row["place_id"];
-          $place = $row["placename"];
-          $location = $row["placelocation"];
-        }
-        echo "<h1> Results </h1>";
-        echo "<p class='text-center'>
-        <a href='$link'>". $place . " - ". $location."</a></p>";
-      }
-      else {
-        echo "<h1> Results not found! </h1>";
-        mysqli_free_result($result);
-        }
-echo "</div>";
-}
 ?>
+
+
+<script>
+var fetch = angular.module('myapp', []);
+fetch.controller('searchCtrl', function ($scope, $http) {
+  $http.get("search.php")
+   .then(function(response){
+     $scope.places = response.data;
+   });
+      });
+</script>
+
+
+<div class='col-md' id = 'content' ng-app='myapp' ng-controller='searchCtrl'>
+    <h1> Results </h1>
+    <table class= 'search_res'>
+   <tr ng-repeat="data in places">
+    <td><a ng-href="readmore.php?id={{data.place_id}}"> {{data.placename}}</td>
+        <td>{{data.placelocation}}</td>
+        <td>${{data.price}}</td>
+
+      </tr>
+
+    </table>
+</div>
+
+<?php
+}
+  ?>
 
 <!-- start of images and content -->
 <?php
@@ -327,7 +335,7 @@ if( isset( $_GET['id'])) {
     $id = $_GET['id'];
 }
 
-$mainrm = './readmore.php?id=';
+$mainrm = 'readmore.php?id=';
 $mainrm .= $id;
 
 if( (int)$id == $id && (int)$id > 0 ) {
@@ -361,12 +369,12 @@ if( (int)$id == $id && (int)$id > 0 ) {
   if ($id % 2 == 0) {
     $first = $id - 1;
 
-    $activerm = './readmore.php?id=';
+    $activerm = 'readmore.php?id=';
     $activerm .= $first;
   } else {
     $first = $id + 1;
 
-    $activerm = './readmore.php?id=';
+    $activerm = 'readmore.php?id=';
     $activerm .= $first;
   }
 
@@ -407,6 +415,7 @@ if( (int)$id == $id && (int)$id > 0 ) {
   <div class='col bottomother'><a href='$activerm'>Read More</a></div>";
   echo "</div></div>";
 }
+
 ?>
 </body>
 </html>

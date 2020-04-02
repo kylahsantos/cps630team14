@@ -108,7 +108,11 @@ color: #2C595B;
 .searchfunction {
   display: none;
 }
-
+.search_res {
+  width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 30px;
+}
 /*for the attractions*/
 #menutitle {
       margin: 5px;
