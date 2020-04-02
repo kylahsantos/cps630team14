@@ -39,7 +39,7 @@
   <nav class="navbar navbar-expand-sm justify-content-center navigation">
      <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="http://localhost/cps630/team-project/home.php">Home</a>
+        <a class="nav-link" href="./home.php">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" onClick="displayModal('about')">About Us</a>
@@ -48,7 +48,7 @@
         <a class="nav-link" onClick="displayModal('contact')">Contact Us</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="http://localhost/cps630/team-project/shoppingcart.php">Shopping Cart</a>
+        <a class="nav-link" href="./shoppingcart.php">Shopping Cart</a>
       </li>
     </ul>
     </nav>
@@ -66,15 +66,15 @@
                                     <li class="parent"><a href="">USA<span class="expand">➢</span></a>
                                             <ul class="child">
                                                     <li><b id='menutitle'>Attractions</b></li>
-                                                    <li><a href="http://localhost/cps630/team-project/home.php?id=1">The Statue of Liberty</a></li>
-                                                    <li><a href="http://localhost/cps630/team-project/home.php?id=2">Cloud Gate</a></li>
+                                                    <li><a href="./home.php?id=1">The Statue of Liberty</a></li>
+                                                    <li><a href="./home.php?id=2">Cloud Gate</a></li>
                                             </ul>
                                     </li>
                                     <li class="parent"><a href="">Canada<span class="expand">➢</span></a>
                                             <ul class="child">
                                                     <li><b id='menutitle'>Attractions</b></li>
-                                                    <li><a href="http://localhost/cps630/team-project/home.php?id=3">CN Tower</a></li>
-                                                    <li><a href="http://localhost/cps630/team-project/home.php?id=4">Niagara Falls</a></li>
+                                                    <li><a href="./home.php?id=3">CN Tower</a></li>
+                                                    <li><a href="./home.php?id=4">Niagara Falls</a></li>
                                             </ul>
                                     </li>
                             </ul>
@@ -87,15 +87,15 @@
                                     <li class="parent"><a href="">Brazil<span class="expand">➢</span></a>
                                             <ul class="child">
                                                     <li><b id='menutitle'>Attractions</b></li>
-                                                    <li><a href="http://localhost/cps630/team-project/home.php?id=5">Christ the Redeemer</a></li>
-                                                    <li><a href="http://localhost/cps630/team-project/home.php?id=6">Sugarloaf Mountain</a></li>
+                                                    <li><a href="./home.php?id=5">Christ the Redeemer</a></li>
+                                                    <li><a href="./home.php?id=6">Sugarloaf Mountain</a></li>
                                             </ul>
                                     </li>
                                     <li class="parent"><a href="">Argentina<span class="expand">➢</span></a>
                                             <ul class="child">
                                                     <li><b id='menutitle'>Attractions</b></li>
-                                                    <li><a href="http://localhost/cps630/team-project/home.php?id=7">Parque Nacional Los Glaciares</a></li>
-                                                    <li><a href="http://localhost/cps630/team-project/home.php?id=8">Aconcagua</a></li>
+                                                    <li><a href="./home.php?id=7">Parque Nacional Los Glaciares</a></li>
+                                                    <li><a href="./home.php?id=8">Aconcagua</a></li>
                                             </ul>
                                     </li>
                             </ul>
@@ -108,15 +108,15 @@
                                     <li class="parent"><a href="">France<span class="expand">➢</span></a>
                                             <ul class="child">
                                                     <li><b id='menutitle'>Attractions</b></li>
-                                                    <li><a href="http://localhost/cps630/team-project/home.php?id=9">Eiffel Tower</a></li>
-                                                    <li><a href="http://localhost/cps630/team-project/home.php?id=10">Louvre Museum</a></li>
+                                                    <li><a href="./home.php?id=9">Eiffel Tower</a></li>
+                                                    <li><a href="./home.php?id=10">Louvre Museum</a></li>
                                             </ul>
                                     </li>
                                     <li class="parent"><a href="">UK<span class="expand">➢</span></a>
                                             <ul class="child">
                                                     <li><b id='menutitle'>Attractions</b></li>
-                                                    <li><a href="http://localhost/cps630/team-project/home.php?id=11">Big Ben</a></li>
-                                                    <li><a href="http://localhost/cps630/team-project/home.php?id=12">Buckingham Place</a></li>
+                                                    <li><a href="./home.php?id=11">Big Ben</a></li>
+                                                    <li><a href="./home.php?id=12">Buckingham Place</a></li>
                                             </ul>
                                     </li>
                             </ul>
@@ -129,15 +129,15 @@
                                     <li class="parent"><a href="">India<span class="expand">➢</span></a>
                                             <ul class="child">
                                                     <li><b id='menutitle'>Attractions</b></li>
-                                                    <li><a href="http://localhost/cps630/team-project/home.php?id=13">Taj Mahal</a></li>
-                                                    <li><a href="http://localhost/cps630/team-project/home.php?id=14">Gateway Of India Mumbai</a></li>
+                                                    <li><a href="./home.php?id=13">Taj Mahal</a></li>
+                                                    <li><a href="./home.php?id=14">Gateway Of India Mumbai</a></li>
                                             </ul>
                                     </li>
                                     <li class="parent"><a href="">Philippines<span class="expand">➢</span></a>
                                             <ul class="child">
                                                     <li><b id='menutitle'>Attractions</b></li>
-                                                    <li><a href="http://localhost/cps630/team-project/home.php?id=15">Boracay</a></li>
-                                                    <li><a href="http://localhost/cps630/team-project/home.php?id=16">Chocolate Hills</a></li>
+                                                    <li><a href="./home.php?id=15">Boracay</a></li>
+                                                    <li><a href="./home.php?id=16">Chocolate Hills</a></li>
                                             </ul>
                                     </li>
                             </ul>
@@ -150,15 +150,15 @@
                                     <li class="parent"><a href="">South Africa<span class="expand">➢</span></a>
                                             <ul class="child">
                                                     <li><b id='menutitle'>Attractions</b></li>
-                                                    <li><a href="http://localhost/cps630/team-project/home.php?id=17">Kruger National Park</a></li>
-                                                    <li><a href="http://localhost/cps630/team-project/home.php?id=18">Cape of Good Hope</a></li>
+                                                    <li><a href="./home.php?id=17">Kruger National Park</a></li>
+                                                    <li><a href="./home.php?id=18">Cape of Good Hope</a></li>
                                             </ul>
                                     </li>
                                     <li class="parent"><a href="">Egypt<span class="expand">➢</span></a>
                                             <ul class="child">
                                                     <li><b id='menutitle'>Attractions</b></li>
-                                                    <li><a href="http://localhost/cps630/team-project/home.php?id=19">Giza Necropolis</a></li>
-                                                    <li><a href="http://localhost/cps630/team-project/home.php?id=20">Great Sphinx of Giza</a></li>
+                                                    <li><a href="./home.php?id=19">Giza Necropolis</a></li>
+                                                    <li><a href="./home.php?id=20">Great Sphinx of Giza</a></li>
                                             </ul>
                                     </li>
                             </ul>
@@ -166,11 +166,11 @@
     </ul>
     <li class="parent"><a href="#">Popular Places</a>
             <ul class="child">
-                    <li><a href="http://localhost/cps630/team-project/home.php?id=1">The Statue of Liberty</a></li>
-                    <li><a href="http://localhost/cps630/team-project/home.php?id=5">Christ the Redeemer</a></li>
-                    <li><a href="http://localhost/cps630/team-project/home.php?id=9">Eiffel Tower</a></li>
-                    <li><a href="http://localhost/cps630/team-project/home.php?id=13">Taj Mahal</a></li>
-                    <li><a href="http://localhost/cps630/team-project/home.php?id=19">Giza Necropolis</a></li>
+                    <li><a href="./home.php?id=1">The Statue of Liberty</a></li>
+                    <li><a href="./home.php?id=5">Christ the Redeemer</a></li>
+                    <li><a href="./home.php?id=9">Eiffel Tower</a></li>
+                    <li><a href="./home.php?id=13">Taj Mahal</a></li>
+                    <li><a href="./home.php?id=19">Giza Necropolis</a></li>
             </ul>
   </ul>
   </div>
