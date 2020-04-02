@@ -72,61 +72,7 @@ something.onclick = function() {
 </head>
 <body>
 <!-- page header (banner, navigation bar and drop downs) -->
-<!-- WEBSITE BANNER -->
-<div class="container">
-          <img class="center-block" id="banner" src="images/banner.png">
-</div>
 
-<!-- ABOUT US -->
-<div id="about" class="modal">
-  <div class="modal-content">
-    <span class="close" onClick="closeModal('about')">&times;</span>
-      <div style="padding:20px;">
-        <h2>About Us</h2>
-        <p>
-           Team #14:
-           <br>Erica Colaco
-           <br>Kylah Santos
-           <br>Ting Ip
-        </p>
-      </div>
-  </div>
-</div>
-<!-- Contact Us -->
-<div id="contact" class="modal">
-  <div class="modal-content">
-    <span class="close" onClick="closeModal('contact')">&times;</span>
-      <div style="padding:20px;">
-        <h2>Contact Us</h2>
-        <p>
-          Team #14:
-            <br>Erica Colaco: ecolaco@ryerson.ca
-            <br>Kylah Santos: kylah.santos@ryerson.ca
-            <br>Ting Ip: ting.ip@ryerson.ca
-        </p>
-      </div>
-    </div>
-</div>
-
-<!-- WEBSITE NAVIGATION BAR -->
-<div>
-  <nav class="navbar navbar-expand-sm justify-content-center navigation">
-     <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="./home.php">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" onClick="displayModal('about')">About Us</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" onClick="displayModal('contact')">Contact Us</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="./shoppingcart.php">Shopping Cart</a>
-      </li>
-    </ul>
-    </nav>
-  </div>
 
 <div class="container p-3 m-3 text-center">
 <?php
