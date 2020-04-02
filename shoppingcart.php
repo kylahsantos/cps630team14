@@ -5,8 +5,8 @@
       <meta charset="utf-8">
       <title>Plan Your Travel</title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-      <link rel="stylesheet" href="http://localhost/cps630/team-project/style.css">
-      <script src="http://localhost/cps630/team-project/script.js"></script>
+      <link rel="stylesheet" href="./style.css">
+      <script src="./script.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -113,7 +113,7 @@ something.onclick = function() {
   <nav class="navbar navbar-expand-sm justify-content-center navigation">
      <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="http://localhost/cps630/team-project/home.php">Home</a>
+        <a class="nav-link" href="./home.php">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" onClick="displayModal('about')">About Us</a>
@@ -122,7 +122,7 @@ something.onclick = function() {
         <a class="nav-link" onClick="displayModal('contact')">Contact Us</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="http://localhost/cps630/team-project/shoppingcart.php">Shopping Cart</a>
+        <a class="nav-link" href="./shoppingcart.php">Shopping Cart</a>
       </li>
     </ul>
     </nav>
