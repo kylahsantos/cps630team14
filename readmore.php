@@ -5,8 +5,8 @@
       <meta charset="utf-8">
       <title>Plan Your Travel</title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-      <link rel="stylesheet" href="./style.css">
-      <script src="./script.js"></script>
+      <link rel="stylesheet" href="style.css">
+      <script src="script.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -38,7 +38,7 @@
       $result = mysqli_query($conn, $sql);
 
 while ($row = mysqli_fetch_array($result)) {
-  echo "<h1>" . $row["place_name"]. "</h1><br><div class='row' id='content'>";
+  echo "<h1>" . $row["place_name"]. "</h1><br> <h3 style = 'text-align:center;color: #D19077'> Price: $". $row["price"]."</h3><div class='row' id='content'>";
   echo "<div class='col-sm-12' id='content'>";
   echo "<img class ='readmore' src=". $row["photo1"]. " >
         <img class='readmore' src=". $row["photo2"]. ">
