@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 03, 2020 at 05:43 PM
+-- Generation Time: Apr 07, 2020 at 12:45 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -332,6 +332,30 @@ INSERT INTO `travelplan` (`id`, `tour_id`, `start_date`, `trip_duration`, `air_f
 (1, 'EUL01', '2020-07-12', '7 days', 90, 'United Kingdom', 'France', 'Big Ben AND Buckingham Palace', 'Eiffel Tower AND Louvre Museum', 1485),
 (2, 'ASL01', '2020-12-03', '7 days', 508, 'India', 'Philippines', 'Taj Mahal AND Gateway of India', 'Boracay AND Chocolate Hills', 1745);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(250) NOT NULL,
+  `fullname` varchar(250) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `telno` varchar(250) NOT NULL,
+  `email` varchar(250) NOT NULL,
+  `password` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `fullname`, `address`, `telno`, `email`, `password`) VALUES
+(3, 'testing', 'test', 'test', '1234567890', 'test@test.com', '$2y$10$2RAduCZ6QX5WQgEDd3f3O.r7urZi3HINiP.vLSB.FkKs32TboBEwK'),
+(4, 'test2', 'test2', 'test2', 'test2', 'test2@test2.com', '$2y$10$ulPN7OgSn5LI8/ASMWfHpOuTvTb9SxY/W0KmarIDHlytMmyMaLCLi');
+
 --
 -- Indexes for dumped tables
 --
@@ -396,6 +420,12 @@ ALTER TABLE `travelplan`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -446,6 +476,12 @@ ALTER TABLE `travelinfo`
 --
 ALTER TABLE `travelplan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
