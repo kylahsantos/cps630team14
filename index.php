@@ -75,9 +75,9 @@ app.config(function($routeProvider) {
         templateUrl : "contactus.html"
     })
 	.when("/shoppingcart", {
-        templateUrl : "shoppingcart.php"
-	
+        templateUrl : "shoppingcart.php"	
     })
+	
 	.when("/statueofliberty", {
         templateUrl : "main.php?id=1"
     })
@@ -117,7 +117,7 @@ app.config(function($routeProvider) {
 	.when("/tajmahal", {
         templateUrl : "main.php?id=13"
     })
-	.when("/gatewayofindamumbai", {
+	.when("/gatewayofindiamumbai", {
         templateUrl : "main.php?id=14"
     })
 	.when("/boracay", {
@@ -137,6 +137,69 @@ app.config(function($routeProvider) {
     })
 	.when("/greatsphinxofgiza", {
         templateUrl : "main.php?id=20"
+    })
+
+
+
+	.when("/readmore/thestatueofliberty", {
+        templateUrl : "readmore.php?id=1"
+    })
+	.when("/readmore/cloudgate", {
+        templateUrl : "readmore.php?id=2"
+    })
+	.when("/readmore/cntower", {
+        templateUrl : "readmore.php?id=3"
+    })
+	.when("/readmore/niagrafalls", {
+        templateUrl : "readmore.php?id=4"
+    })
+	.when("/readmore/christtheredeemer", {
+        templateUrl : "readmore.php?id=5"
+    })
+	.when("/readmore/sugarloafmountain", {
+        templateUrl : "readmore.php?id=6"
+    })
+	.when("/readmore/parquenacionallosglaciares", {
+        templateUrl : "readmore.php?id=7"
+    })
+	.when("/readmore/aconcagua", {
+        templateUrl : "readmore.php?id=8"
+    })
+	.when("/readmore/eiffeltower", {
+        templateUrl : "readmore.php?id=9"
+    })
+	.when("/readmore/louvremuseum", {
+        templateUrl : "readmore.php?id=10"
+    })
+	.when("/readmore/bigben", {
+        templateUrl : "readmore.php?id=11"
+    })
+	.when("/readmore/buckinghampalace", {
+        templateUrl : "readmore.php?id=12"
+    })
+	.when("/readmore/tajmahal", {
+        templateUrl : "readmore.php?id=13"
+    })
+	.when("/readmore/gatewayofindiamumbai", {
+        templateUrl : "readmore.php?id=14"
+    })
+	.when("/readmore/boracay", {
+        templateUrl : "readmore.php?id=15"
+    })
+	.when("/readmore/chocolatehills", {
+        templateUrl : "readmore.php?id=16"
+    })
+	.when("/readmore/krugernationalpark", {
+        templateUrl : "readmore.php?id=17"
+    })
+	.when("/readmore/capeofgoodhope", {
+        templateUrl : "readmore.php?id=18"
+    })
+	.when("/readmore/gizanecropolis", {
+        templateUrl : "readmore.php?id=19"
+    })
+	.when("/readmore/greatsphinxofgiza", {
+        templateUrl : "readmore.php?id=20"
     })
 	;
 });

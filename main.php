@@ -170,7 +170,7 @@ if( (int)$id == $id && (int)$id > 0 ) {
   while ($row = mysqli_fetch_array($result)) {
     echo "<h2>" . $row["placename"]. "</h2><br>";
     echo "<img id='mainimage' src=". $row["mainimage"]. "><br>";
-    echo "<br><h3><b>". $row["placelocation"]."</b></h3><h4><a href=". $mainrm .">Read More</a></h4>";
+    echo "<br><h3><b>". $row["placelocation"]."</b></h3><h4><a href='#!readmore/". str_replace(' ', '', strtolower($row["placename"])) ."'>Read More</a></h4>";
     } //end of while loop
    mysqli_free_result($result);
   //end of if statement
@@ -219,20 +219,24 @@ if( (int)$id == $id && (int)$id > 0 ) {
      //mySQL query HOME
      $sql = "SELECT * FROM home WHERE place_id=".$first;
      $result = mysqli_query($conn, $sql);
+	 
+	 $name = "";
      while ($row = mysqli_fetch_array($result)) {
          echo "<div class='col topother' id='content'>";
           echo "<img class = 'closedistance' src=". $row["mainimage"]. ">";
           echo "<br><b>" .$row["placename"]. "</b>";
           echo "<br>". $row["placelocation"]."<br>
          </div>";
+		 $name = $row["placename"];
        }//end of while loop
 
-     mysqli_free_result($result);
+    
      echo "<div class='w-100'></div>
   <div class='col bottomother'><a href=''>Read More</a></div>
   <div class='col bottomother'><a href=''>Read More</a></div>
-  <div class='col bottomother'><a href='$activerm'>Read More</a></div>";
-  echo "</div></div>";
+  <div class='col bottomother'><a href='#!readmore/". str_replace(' ', '', strtolower($name))."'>Read More</a></div>";
+   mysqli_free_result($result);
+   echo "</div></div>";
 }
 
 ?>

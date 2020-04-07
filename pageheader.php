@@ -105,7 +105,7 @@
                                               <ul class="child">
                                                       <li><b id='menutitle'>Attractions</b></li>
                                                       <li><a href="#!tajmahal">Taj Mahal</a></li>
-                                                      <li><a href="#!gatewayofindamumbai">Gateway Of India Mumbai</a></li>
+                                                      <li><a href="#!gatewayofindiamumbai">Gateway Of India Mumbai</a></li>
                                               </ul>
                                       </li>
                                       <li class="parent"><a href="">Philippines<span class="expand">➢</span></a>

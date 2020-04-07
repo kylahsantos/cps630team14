@@ -14,7 +14,6 @@
 <body>
 
 <!-- page header (banner, navigation bar and drop downs) -->
-<?php include 'pageheader.php'; ?>
 
 <div class="container p-3 my-3" id="content">
 <div class = "caption" id="content">
