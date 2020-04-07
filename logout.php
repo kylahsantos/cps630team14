@@ -1,6 +1,13 @@
+
 <?php
+
+//logout.php
+
 session_start();
+
 session_destroy();
-// Redirect to the login page:
-header('Location: home.php');
+
+header("location:loginindex.php");
+
+
 ?>
