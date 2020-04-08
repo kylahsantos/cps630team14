@@ -16,36 +16,6 @@
 	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
 
-<script>
-$(document).ready(function() {
-  var par = $('.searchfunction');
-  $(par).hide();
-
-  $('button').click(function(e) {
-      $(par).slideToggle('slow');
-      e.preventDefault();
-  });
-});
-
-function toggle_visibility(id) {
- var e = document.getElementById(id);
- if(e.style.display == 'block')
-    e.style.display = 'none';
- else
-    e.style.display = 'block';
-}
-
-$(document).ready(function(){
-    $('#content-1, #content-2, #content-3').hide();
-    $('a').on('click',function(){
-        var container = $(this).data('container');
-        if ($(container).css('display') == 'none') {
-        $('#content-1, #content-2, #content-3').hide();
-        }
-        $(container).toggle();
-    })
-})
-</script>
 <style>
 body{
 background-color: #F6E9DB;
@@ -76,6 +46,9 @@ app.config(function($routeProvider) {
     })
 	.when("/shoppingcart", {
         templateUrl : "shoppingcart.php"	
+    })
+		.when("/search", {
+        templateUrl : "searchpage.php"	
     })
 	
 	.when("/statueofliberty", {
