@@ -20,10 +20,13 @@
           <a class="nav-link" href="#!shoppingcart">Shopping Cart</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-container="#content-1">Search</a>
+          <a class="nav-link" href="#!search">Search</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" data-container="#content-2">db Maintain</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#!userlogin">Login</a>
         </li>
       </ul>
       </nav>

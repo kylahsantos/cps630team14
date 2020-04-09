@@ -33,146 +33,224 @@ font-family: 'Muli', sans-serif;
  
 <script>
 var app = angular.module("myApp", ["ngRoute"]);
+app.controller('login_register_controller', function($scope, $http){
+ $scope.closeMsg = function(){
+  $scope.alertMsg = false;
+ };
+
+ $scope.login_form = true;
+
+ $scope.showRegister = function(){
+  $scope.login_form = false;
+  $scope.register_form = true;
+  $scope.alertMsg = false;
+ };
+
+ $scope.showLogin = function(){
+  $scope.register_form = false;
+  $scope.login_form = true;
+  $scope.alertMsg = false;
+ };
+
+ $scope.submitRegister = function(){
+  $http({
+   method:"POST",
+   url:"login_user_register.php",
+   data:$scope.registerData
+  }).then(function(data){
+   $scope.alertMsg = true;
+   if(data.error != '')
+   {
+    $scope.alertClass = 'alert-danger';
+    $scope.alertMessage = data.error;
+   }
+   else
+   {
+    $scope.alertClass = 'alert-success';
+    $scope.alertMessage = data.message;
+    $scope.registerData = {};
+   }
+  });
+ };
+
+ $scope.submitLogin = function(){
+  $http({
+   method:"POST",
+   url:"login_user_auth.php",
+   data:$scope.loginData
+  }).then(function(data){
+   if(data.error != '')
+   {
+    $scope.alertMsg = true;
+    $scope.alertClass = 'alert-danger';
+    $scope.alertMessage = data.error;
+   }
+   else
+   {
+    location.reload();
+   }
+  });
+ };
+});
+
+app.controller('live_search_controller', function($scope, $http){
+ $scope.fetchData = function(){
+  $http({
+   method:"POST",
+   url:"user_fetch_data.php",
+   data:{search_query:$scope.search_query}
+  }).then(function(data){
+   $scope.searchData = data;
+  });
+ };
+});
+
 app.config(function($routeProvider) {
     $routeProvider
     .when("/", {
-        templateUrl : "main.php"
+        templateUrl : "./pages/main.php"
     })
     .when("/aboutus", {
-        templateUrl : "aboutus.html"
+        templateUrl : "./pages/aboutus.html"
     })
     .when("/contactus", {
-        templateUrl : "contactus.html"
+        templateUrl : "./pages/contactus.html"
     })
 	.when("/shoppingcart", {
-        templateUrl : "shoppingcart.php"	
+        templateUrl : "./pages/shoppingcart.php"	
     })
 		.when("/search", {
-        templateUrl : "searchpage.php"	
+        templateUrl : "./pages/searchpage.php"	
     })
 	
+	.when("/userlogin", {
+		templateUrl: "./pages/login_user_index.php"
+	})
+	
+	
+	
 	.when("/statueofliberty", {
-        templateUrl : "main.php?id=1"
+        templateUrl : "./pages/main.php?id=1"
     })
 	.when("/cloudgate", {
-        templateUrl : "main.php?id=2"
+        templateUrl : "./pages/main.php?id=2"
     })
 	.when("/cntower", {
-        templateUrl : "main.php?id=3"
+        templateUrl : "./pages/main.php?id=3"
     })
 	.when("/niagrafalls", {
-        templateUrl : "main.php?id=4"
+        templateUrl : "./pages/main.php?id=4"
     })
 	.when("/christtheredeemer", {
-        templateUrl : "main.php?id=5"
+        templateUrl : "./pages/main.php?id=5"
     })
 	.when("/sugarloafmountain", {
-        templateUrl : "main.php?id=6"
+        templateUrl : "./pages/main.php?id=6"
     })
 	.when("/parquenacionallosglaciares", {
-        templateUrl : "main.php?id=7"
+        templateUrl : "./pages/main.php?id=7"
     })
 	.when("/aconcagua", {
-        templateUrl : "main.php?id=8"
+        templateUrl : "./pages/main.php?id=8"
     })
 	.when("/eiffeltower", {
-        templateUrl : "main.php?id=9"
+        templateUrl : "./pages/main.php?id=9"
     })
 	.when("/louvremuseum", {
-        templateUrl : "main.php?id=10"
+        templateUrl : "./pages/main.php?id=10"
     })
 	.when("/bigben", {
-        templateUrl : "main.php?id=11"
+        templateUrl : "./pages/main.php?id=11"
     })
 	.when("/buckinghamplace", {
-        templateUrl : "main.php?id=12"
+        templateUrl : "./pages/main.php?id=12"
     })
 	.when("/tajmahal", {
-        templateUrl : "main.php?id=13"
+        templateUrl : "./pages/main.php?id=13"
     })
 	.when("/gatewayofindiamumbai", {
-        templateUrl : "main.php?id=14"
+        templateUrl : "./pages/main.php?id=14"
     })
 	.when("/boracay", {
-        templateUrl : "main.php?id=15"
+        templateUrl : "./pages/main.php?id=15"
     })
 	.when("/chocolatehills", {
-        templateUrl : "main.php?id=16"
+        templateUrl : "./pages/main.php?id=16"
     })
 	.when("/krugernationalpark", {
-        templateUrl : "main.php?id=17"
+        templateUrl : "./pages/main.php?id=17"
     })
 	.when("/capeofgoodhope", {
-        templateUrl : "main.php?id=18"
+        templateUrl : "./pages/main.php?id=18"
     })
 	.when("/gizanecropolis", {
-        templateUrl : "main.php?id=19"
+        templateUrl : "./pages/main.php?id=19"
     })
 	.when("/greatsphinxofgiza", {
-        templateUrl : "main.php?id=20"
+        templateUrl : "./pages/main.php?id=20"
     })
 
 
 
 	.when("/readmore/thestatueofliberty", {
-        templateUrl : "readmore.php?id=1"
+        templateUrl : "./pages/readmore.php?id=1"
     })
 	.when("/readmore/cloudgate", {
-        templateUrl : "readmore.php?id=2"
+        templateUrl : "./pages/readmore.php?id=2"
     })
 	.when("/readmore/cntower", {
-        templateUrl : "readmore.php?id=3"
+        templateUrl : "./pages/readmore.php?id=3"
     })
 	.when("/readmore/niagrafalls", {
-        templateUrl : "readmore.php?id=4"
+        templateUrl : "./pages/readmore.php?id=4"
     })
 	.when("/readmore/christtheredeemer", {
-        templateUrl : "readmore.php?id=5"
+        templateUrl : "./pages/readmore.php?id=5"
     })
 	.when("/readmore/sugarloafmountain", {
-        templateUrl : "readmore.php?id=6"
+        templateUrl : "./pages/readmore.php?id=6"
     })
 	.when("/readmore/parquenacionallosglaciares", {
-        templateUrl : "readmore.php?id=7"
+        templateUrl : "./pages/readmore.php?id=7"
     })
 	.when("/readmore/aconcagua", {
-        templateUrl : "readmore.php?id=8"
+        templateUrl : "./pages/readmore.php?id=8"
     })
 	.when("/readmore/eiffeltower", {
-        templateUrl : "readmore.php?id=9"
+        templateUrl : "./pages/readmore.php?id=9"
     })
 	.when("/readmore/louvremuseum", {
-        templateUrl : "readmore.php?id=10"
+        templateUrl : "./pages/readmore.php?id=10"
     })
 	.when("/readmore/bigben", {
-        templateUrl : "readmore.php?id=11"
+        templateUrl : "./pages/readmore.php?id=11"
     })
 	.when("/readmore/buckinghampalace", {
-        templateUrl : "readmore.php?id=12"
+        templateUrl : "./pages/readmore.php?id=12"
     })
 	.when("/readmore/tajmahal", {
-        templateUrl : "readmore.php?id=13"
+        templateUrl : "./pages/readmore.php?id=13"
     })
 	.when("/readmore/gatewayofindiamumbai", {
-        templateUrl : "readmore.php?id=14"
+        templateUrl : "./pages/readmore.php?id=14"
     })
 	.when("/readmore/boracay", {
-        templateUrl : "readmore.php?id=15"
+        templateUrl : "./pages/readmore.php?id=15"
     })
 	.when("/readmore/chocolatehills", {
-        templateUrl : "readmore.php?id=16"
+        templateUrl : "./pages/readmore.php?id=16"
     })
 	.when("/readmore/krugernationalpark", {
-        templateUrl : "readmore.php?id=17"
+        templateUrl : "./pages/readmore.php?id=17"
     })
 	.when("/readmore/capeofgoodhope", {
-        templateUrl : "readmore.php?id=18"
+        templateUrl : "./pages/readmore.php?id=18"
     })
 	.when("/readmore/gizanecropolis", {
-        templateUrl : "readmore.php?id=19"
+        templateUrl : "./pages/readmore.php?id=19"
     })
 	.when("/readmore/greatsphinxofgiza", {
-        templateUrl : "readmore.php?id=20"
+        templateUrl : "./pages/readmore.php?id=20"
     })
 	;
 });

@@ -64,10 +64,11 @@ fetch.controller('searchCtrl', function ($scope, $http) {
 </script>
 
 
-<div class='col-md' id = 'content' ng-app='myapp' ng-controller='searchCtrl'>
+<div id = 'content' ng-app='myapp' ng-controller='searchCtrl'>
     <h1> Results </h1>
     <table class= 'search_res'>
-   <tr ng-repeat="data in places">
+         <tr ng-repeat="data in places">
+      <td><input type="checkbox" ></td>
     <td><a ng-href="readmore.php?id={{data.place_id}}"> {{data.placename}}</td>
         <td>{{data.placelocation}}</td>
         <td>${{data.price}}</td>
@@ -75,7 +76,11 @@ fetch.controller('searchCtrl', function ($scope, $http) {
       </tr>
 
     </table>
+
+
 </div>
+
+
 
 <?php
 }
