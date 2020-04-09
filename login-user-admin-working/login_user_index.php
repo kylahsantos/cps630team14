@@ -130,13 +130,15 @@ session_start();
    <table class="table table-striped table-bordered">
     <thead>
      <tr>
+      <th>Select</th>
       <th>Place Name</th>
       <th>Place Location</th>
       <th>Price ($ CAD)</th>
      </tr>
     </thead>
     <tbody>
-     <tr ng-repeat="data in searchData">
+    <tr ng-repeat="data in searchData">
+      <td> <input type= "checkbox"> </td>
       <td>{{ data.placename }}</td>
       <td>{{ data.placelocation }}</td>
       <td>{{ data.price }}</td>
