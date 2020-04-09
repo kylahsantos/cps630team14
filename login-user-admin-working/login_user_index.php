@@ -56,9 +56,14 @@ session_start();
         <div class="form-group" align="center">
           <input type="submit" name="login" class="btn btn-primary" value="Login" />
           <br />
-          <input type="button" name="register_link" class="btn btn-primary btn-link" ng-click="showRegister()" value="Register" />
-        </div>
+		  <br />
+          <input type="button" name="register_link" class="btn btn-primary" ng-click="showRegister()" value="Register" />
+        
    </form> <!-- end of form -->
+   <br />
+   <br />
+   <button class="btn btn-primary" ng-click="redirect()">Admin Mode</button>
+   </div>
  </div> <!-- end of panel body -->
 </div> <!-- end of panel -->
 
@@ -97,9 +102,14 @@ session_start();
         <div class="form-group" align="center">
           <input type="submit" name="register" class="btn btn-primary" value="Register" />
           <br />
-          <input type="button" name="login_link" class="btn btn-primary btn-link" ng-click="showLogin()" value="Login" />
+		  <br />
+          <input type="button" name="login_link" class="btn btn-primary" ng-click="showLogin()" value="Login" />
+		  <br />
+		  <br />
+		  <button class="btn btn-primary" ng-click="redirect()">Admin Mode</button>
         </div>
    </form> <!-- end of form -->
+   
  </div> <!-- end of panel body -->
 </div> <!-- end of panel -->
 
@@ -127,7 +137,7 @@ session_start();
     </div>
    </div>
    <br />
-   <table class="table table-striped table-bordered">
+    <table class="table table-striped table-bordered">
     <thead>
      <tr>
       <th>Select</th>
@@ -167,6 +177,10 @@ app.controller('login_register_controller', function($scope, $http){
 $scope.closeMsg = function(){
 $scope.alertMsg = false;
 };
+
+ $scope.redirect = function(){
+   window.location = "login_admin_index.php";
+ }
 
 $scope.login_form = true;
 
