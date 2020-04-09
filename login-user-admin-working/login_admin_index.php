@@ -120,7 +120,7 @@ session_start();
     </div>
     </div>
 <!--ADMIN DASHBOARD DATABASE MAINTAIN -->
-    <a href="logout.php">Logout</a>
+    <a href="logout_admin.php">Logout</a>
 </div>
    <?php
    }
