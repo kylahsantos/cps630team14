@@ -120,7 +120,7 @@ session_start();
     </div>
     </div>
 <!--ADMIN DASHBOARD DATABASE MAINTAIN -->
-    <a href="logout.php">Logout</a>
+    <a href="logout_admin.php">Logout</a>
 </div>
    <?php
    }
@@ -248,5 +248,3 @@ app.controller('liveController', function($scope, $http){
 });
 
 </script>
-</body>
-</html>

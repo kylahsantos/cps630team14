@@ -34,64 +34,65 @@ font-family: 'Muli', sans-serif;
 <script>
 var app = angular.module("myApp", ["ngRoute"]);
 app.controller('login_register_controller', function($scope, $http){
- $scope.closeMsg = function(){
-  $scope.alertMsg = false;
- };
+$scope.closeMsg = function(){
+$scope.alertMsg = false;
+};
 
- $scope.login_form = true;
+$scope.login_form = true;
 
- $scope.showRegister = function(){
-  $scope.login_form = false;
-  $scope.register_form = true;
-  $scope.alertMsg = false;
- };
+$scope.showRegister = function(){
+$scope.login_form = false;
+$scope.register_form = true;
+$scope.alertMsg = false;
+};
 
- $scope.showLogin = function(){
-  $scope.register_form = false;
-  $scope.login_form = true;
-  $scope.alertMsg = false;
- };
+$scope.showLogin = function(){
+$scope.register_form = false;
+$scope.login_form = true;
+$scope.alertMsg = false;
+};
 
- $scope.submitRegister = function(){
-  $http({
-   method:"POST",
-   url:"login_user_register.php",
-   data:$scope.registerData
-  }).then(function(data){
-   $scope.alertMsg = true;
-   if(data.error != '')
-   {
-    $scope.alertClass = 'alert-danger';
-    $scope.alertMessage = data.error;
-   }
-   else
-   {
-    $scope.alertClass = 'alert-success';
-    $scope.alertMessage = data.message;
-    $scope.registerData = {};
-   }
-  });
- };
-
- $scope.submitLogin = function(){
-  $http({
-   method:"POST",
-   url:"login_user_auth.php",
-   data:$scope.loginData
-  }).then(function(data){
-   if(data.error != '')
-   {
-    $scope.alertMsg = true;
-    $scope.alertClass = 'alert-danger';
-    $scope.alertMessage = data.error;
-   }
-   else
-   {
-    location.reload();
-   }
-  });
- };
+$scope.submitRegister = function(){
+$http({
+ method:"POST",
+ url:"login_user_register.php",
+ data:$scope.registerData
+}).then(function(data){
+ $scope.alertMsg = true;
+ if(data.error != '')
+ {
+  $scope.alertClass = 'alert-danger';
+  $scope.alertMessage = data.error;
+ }
+ else
+ {
+  $scope.alertClass = 'alert-success';
+  $scope.alertMessage = data.message;
+  $scope.registerData = {};
+ }
 });
+};
+
+$scope.submitLogin = function(){
+$http({
+ method:"POST",
+ url:"login_user_auth.php",
+ data:$scope.loginData
+}).then(function(data){
+ if(data.error != '')
+ {
+  $scope.alertMsg = true;
+  $scope.alertClass = 'alert-danger';
+  $scope.alertMessage = data.error;
+ }
+ else
+ {
+  location.reload();
+ }
+});
+};
+});
+//end of login-register app
 
 app.controller('live_search_controller', function($scope, $http){
  $scope.fetchData = function(){
@@ -104,6 +105,7 @@ app.controller('live_search_controller', function($scope, $http){
   });
  };
 });
+
 
 app.config(function($routeProvider) {
     $routeProvider
