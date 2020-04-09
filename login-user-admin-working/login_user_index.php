@@ -25,8 +25,9 @@ session_start();
   <br />
 
   <div ng-app="login_register_app" ng-controller="login_register_controller" class="container form_style">
+
    <?php
-   if(!isset($_SESSION["usermodename"]))
+   if(!isset($_SESSION["name"]))
    {
    ?>
 <div class="alert {{alertClass}} alert-dismissible" ng-show="alertMsg">
@@ -146,19 +147,21 @@ session_start();
      <a href="logout_user.php">Logout</a>
     </div>
    </div>
-
+  </div>
    <!-- END OF USER DASHBOARD IS HERE FOR SEARCH AND PLAN STUFF -->
    <?php
    }
    ?>
 
-  </div>
+
  </body>
 </html>
 
 <script>
 var app = angular.module('login_register_app', []);
+
 app.controller('login_register_controller', function($scope, $http){
+
 $scope.closeMsg = function(){
 $scope.alertMsg = false;
 };
@@ -199,22 +202,22 @@ $http({
 };
 
 $scope.submitLogin = function(){
-$http({
- method:"POST",
- url:"login_user_auth.php",
- data:$scope.loginData
-}).success(function(data){
- if(data.error != '')
- {
-  $scope.alertMsg = true;
-  $scope.alertClass = 'alert-danger';
-  $scope.alertMessage = data.error;
- }
- else
- {
-  location.reload();
- }
-});
+ $http({
+  method:"POST",
+  url:"login_user_auth.php",
+  data:$scope.loginData
+ }).success(function(data){
+  if(data.error != '')
+  {
+   $scope.alertMsg = true;
+   $scope.alertClass = 'alert-danger';
+   $scope.alertMessage = data.error;
+  }
+  else
+  {
+   location.reload();
+  }
+ });
 };
 });
 //end of login-register app
