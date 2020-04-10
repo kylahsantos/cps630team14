@@ -10,18 +10,13 @@ session_start();
  <head>
   <title>PLAN YOUR TRAVEL - USER MODE</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href ="user-admin-style.css" type = "text/css" rel ="stylesheet">
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
  </head>
- <style>
- .form_style
- {
-  width: auto;
-  margin: 0 auto;
- }
- </style>
  <body>
   <br />
-   <h3 align="center">PLAN YOUR TRAVEL - USER MODE</h3>
+  <img src="../images/banner.png" class = "center-block" id = "banner">
+
   <br />
 
   <div ng-app="login_register_app" ng-controller="login_register_controller" class="container form_style">
@@ -58,7 +53,7 @@ session_start();
           <br />
 		  <br />
           <input type="button" name="register_link" class="btn btn-primary" ng-click="showRegister()" value="Register" />
-        
+
    </form> <!-- end of form -->
    <br />
    <br />
@@ -109,7 +104,7 @@ session_start();
 		  <button class="btn btn-primary" ng-click="redirect()">Admin Mode</button>
         </div>
    </form> <!-- end of form -->
-   
+
  </div> <!-- end of panel body -->
 </div> <!-- end of panel -->
 
