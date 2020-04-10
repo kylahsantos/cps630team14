@@ -1,0 +1,32 @@
+/* user stylesheet */
+body{
+  background-color: #F6E9DB;
+  color: #21282D;
+  font-family: 'Muli', sans-serif;
+}
+
+.panel-body{
+  background-color: #EAC4B3;
+}
+.title{
+  color: yellow;
+}
+.form_style
+{
+ width: auto;
+ margin: 0 auto;
+}
+
+.btn{
+  background-color: #2C595B;
+  border-color: #2C595B;
+}
+
+.btn-primary:hover{
+  background-color: #BAD1CD;
+}
+
+#banner{
+  max-width: 20%;
+  height: auto;
+}
