@@ -8,8 +8,8 @@ body{
 .panel-body{
   background-color: #EAC4B3;
 }
-.title{
-  color: yellow;
+tr {
+  background-color: white;
 }
 .form_style
 {

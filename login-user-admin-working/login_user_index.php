@@ -12,6 +12,7 @@ session_start();
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href ="user-admin-style.css" type = "text/css" rel ="stylesheet">
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
  </head>
  <body>
   <br />
@@ -132,9 +133,9 @@ session_start();
     </div>
    </div>
    <br />
-    <table class="table table-striped table-bordered">
+    <table class="table table-bordered">
     <thead>
-     <tr>
+     <tr style= "background-color: #92B8AC">
       <th>Select</th>
       <th>Place Name</th>
       <th>Place Location</th>
@@ -142,7 +143,7 @@ session_start();
      </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="data in searchData">
+    <tr ng-repeat="data in searchData" style = "background-color: #EAE1DE">
       <td> <input type= "checkbox"> </td>
       <td>{{ data.placename }}</td>
       <td>{{ data.placelocation }}</td>
@@ -160,11 +161,11 @@ session_start();
    }
    ?>
 
-
  </body>
 </html>
 
 <script>
+
 var app = angular.module('login_register_app', []);
 
 app.controller('login_register_controller', function($scope, $http){
@@ -243,5 +244,9 @@ app.controller('live_search_controller', function($scope, $http){
    $scope.searchData = data;
   });
  };
+
+
 });
+
+
 </script>
