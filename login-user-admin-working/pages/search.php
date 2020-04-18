@@ -44,6 +44,11 @@
 					<img src= "{{ data.mainimage }}" style="display:block; max-height: 300px; margin-left: auto; margin-right: auto; max-width: 50%;"/>
 				</td>
 			</tr>
+			<tr>
+				<td ng-repeat="data in searchData | filter :{'isSelected': 'true' }">
+					{{ data.place_desc }}
+				</td>
+			</tr>
 		</table>
    </div>
    

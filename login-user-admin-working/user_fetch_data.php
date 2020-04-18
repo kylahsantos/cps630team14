@@ -21,7 +21,7 @@ if(isset($form_data->search_query))
 }
 else
 {
- $query = "SELECT * FROM home ORDER BY place_id ASC";
+ $query = "SELECT h.place_id as place_id, h.placename as placename, h.placelocation as placelocation, h.mainimage as mainimage, h.price as price, t.place_desc as place_desc FROM home h JOIN travelinfo t ON h.place_id = t.place_id ORDER BY place_id ASC";
 }
 
 $statement = $connect->prepare($query);
