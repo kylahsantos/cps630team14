@@ -13,6 +13,7 @@ session_start();
     <link href ="user-admin-style.css" type = "text/css" rel ="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+
  </head>
  <body >
   <br />

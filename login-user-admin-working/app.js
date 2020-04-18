@@ -94,6 +94,7 @@ app.controller('live_search_controller', function($scope, $http, $location){
    $scope.redirectLogin = function(){
    $location.path("login");
  }
+ 
  $scope.fetchData = function(){
   $http({
    method:"POST",
@@ -103,6 +104,8 @@ app.controller('live_search_controller', function($scope, $http, $location){
    $scope.searchData = data;
   });
  };
+ 
+ 
 
 
 });

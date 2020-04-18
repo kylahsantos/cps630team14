@@ -27,6 +27,26 @@
     </div>
    </div>
    <br />
+   <div ng-hide="myValue" class="ng-hide">
+		<table class="table" style="text-align: center;">
+			<tr>
+				<td ng-repeat="data in searchData | filter :{'isSelected': 'true' }">
+					{{ data.placename }}
+				</td>
+			</tr>
+			<tr>
+				<td ng-repeat="data in searchData | filter :{'isSelected': 'true' }" >
+					{{ data.placelocation }}
+				</td>
+			</tr>
+			<tr>
+				<td ng-repeat="data in searchData | filter :{'isSelected': 'true' }">
+					<img src= "{{ data.mainimage }}" style="display:block; max-height: 300px; margin-left: auto; margin-right: auto; max-width: 50%;"/>
+				</td>
+			</tr>
+		</table>
+   </div>
+   
     <table class="table table-bordered">
     <thead>
      <tr style= "background-color: #92B8AC">
@@ -37,14 +57,15 @@
      </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="data in searchData" style = "background-color: #EAE1DE">
-      <td> <input type= "checkbox"> </td>
+    <tr ng-repeat="data in searchData" ng-init="data.isSelected = false" style = "background-color: #EAE1DE">
+      <td> <input type="checkbox" ng-model="data.isSelected"> </td>
       <td>{{ data.placename }}</td>
       <td>{{ data.placelocation }}</td>
       <td>{{ data.price }}</td>
      </tr>
     </tbody>
    </table>
+   
   </div>
      <a href="logout_user.php">Logout</a>
     </div>
