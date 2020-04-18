@@ -1,6 +1,23 @@
-var app = angular.module('login_register_app', []);
+var app = angular.module('login_register_app', ["ngRoute"]);
+app.config(function($routeProvider) { 
+$routeProvider   
+.when('/', { 
+	templateUrl : './pages/login.php', 
+	controller : 'login_register_controller'})
+.when('/login', { 
+	templateUrl : './pages/login.php', 
+	controller : 'login_register_controller'}) 
+.when('/aboutus', {
+	templateUrl : './pages/search.php', 
+	controller : 'live_search_controller'})   
+.when('/reviews', { 
+	templateUrl : './pages/reviews.html', 
+	controller : 'ReviewsController'})   
+	.otherwise({redirectTo: '/'}); 
+});
 
-app.controller('login_register_controller', function($scope, $http){
+
+app.controller('login_register_controller', function($scope, $http,$route){
 
 $scope.closeMsg = function(){
 $scope.alertMsg = false;
@@ -48,7 +65,7 @@ $http({
 $scope.submitLogin = function(){
  $http({
   method:"POST",
-  url:"login_user_auth.php",
+  url:"./login_user_auth.php",
   data:$scope.loginData
  }).success(function(data){
   if(data.error != '')
@@ -60,6 +77,7 @@ $scope.submitLogin = function(){
   else
   {
    location.reload();
+   
   }
  });
 };
