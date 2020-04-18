@@ -2,8 +2,10 @@
    session_start();
    if(!isset($_SESSION["name"]))
    {
-		header("Location: /login");
-		exit();
+	?>
+		<div ng-init="redirectLogin()"></div>
+
+	<?php
    }
    else{
    ?>

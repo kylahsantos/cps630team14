@@ -7,7 +7,7 @@ $routeProvider
 .when('/login', { 
 	templateUrl : './pages/login.php', 
 	controller : 'login_register_controller'}) 
-.when('/aboutus', {
+.when('/search', {
 	templateUrl : './pages/search.php', 
 	controller : 'live_search_controller'})   
 .when('/reviews', { 
@@ -17,7 +17,7 @@ $routeProvider
 });
 
 
-app.controller('login_register_controller', function($scope, $http,$route){
+app.controller('login_register_controller', function($scope, $http,$location){
 
 $scope.closeMsg = function(){
 $scope.alertMsg = false;
@@ -25,6 +25,10 @@ $scope.alertMsg = false;
 
  $scope.redirect = function(){
    window.location = "login_admin_index.php";
+ }
+ 
+  $scope.redirectSearch = function(){
+   $location.path("search");
  }
 
 $scope.login_form = true;
@@ -76,15 +80,20 @@ $scope.submitLogin = function(){
   }
   else
   {
-   location.reload();
+   $location.path("search");
    
   }
  });
 };
+
+
 });
 //end of login-register app
 
-app.controller('live_search_controller', function($scope, $http){
+app.controller('live_search_controller', function($scope, $http, $location){
+   $scope.redirectLogin = function(){
+   $location.path("login");
+ }
  $scope.fetchData = function(){
   $http({
    method:"POST",
