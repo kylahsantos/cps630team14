@@ -93,7 +93,8 @@ $scope.submitLogin = function(){
 app.controller('live_search_controller', function($scope, $http, $location){
    $scope.redirectLogin = function(){
    $location.path("login");
- }
+ };
+ $scope.checkboxNum = 0;
  
  $scope.fetchData = function(){
   $http({
@@ -103,6 +104,16 @@ app.controller('live_search_controller', function($scope, $http, $location){
   }).success(function(data){
    $scope.searchData = data;
   });
+    $http({
+   method:"POST",
+   url:"user_fetch_reviews.php",
+   data:{search_query:$scope.search_query}
+  }).success(function(data){
+   $scope.searchReviews = data;
+  });
+ };
+ 
+ $scope.clickcheckbox = function(data){
  };
  
  

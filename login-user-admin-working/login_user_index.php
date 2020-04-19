@@ -17,7 +17,7 @@ session_start();
  </head>
  <body >
   <br />
-  <img src="../images/banner.png" class = "center-block" id = "banner">
+  <img src="./images/banner.png" class = "center-block" id = "banner">
 
   <br />
 	<div ng-view></div>

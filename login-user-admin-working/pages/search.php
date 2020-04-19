@@ -49,6 +49,16 @@
 					{{ data.place_desc }}
 				</td>
 			</tr>
+			<tr>
+				<td ng-repeat="data in searchData | filter :{'isSelected': 'true' }">
+					Reviews:
+				</td>
+			</tr>
+			<tr>
+				<td ng-repeat="data in searchData | filter :{'isSelected': 'true' }">
+				<div ng-repeat="review in searchReviews | filter : { 'place_id': data.place_id }:true">{{ review.review }}</div>
+				</td>	
+			</tr>
 		</table>
    </div>
    
@@ -63,7 +73,7 @@
     </thead>
     <tbody>
     <tr ng-repeat="data in searchData" ng-init="data.isSelected = false" style = "background-color: #EAE1DE">
-      <td> <input type="checkbox" ng-model="data.isSelected"> </td>
+      <td> <input type="checkbox" ng-model="data.isSelected" ng-click='clickcheckbox(data)'> </td>
       <td>{{ data.placename }}</td>
       <td>{{ data.placelocation }}</td>
       <td>{{ data.price }}</td>
