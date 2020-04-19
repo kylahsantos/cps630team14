@@ -13,15 +13,17 @@ if(isset($form_data->search_query))
 {
  $search_query = $form_data->search_query;
  $query = "
- SELECT * FROM home
- WHERE (placename LIKE '%$search_query%'
- OR placelocation LIKE '%$search_query%'
- OR price LIKE '%$search_query%')
+ SELECT h.place_id as place_id, h.placename as placename, h.placelocation as placelocation, h.mainimage as mainimage, h.price as price, t.place_desc as place_desc 
+ FROM home h JOIN travelinfo t ON h.place_id = t.place_id
+ WHERE (h.placename LIKE '%$search_query%'
+ OR h.placelocation LIKE '%$search_query%'
+ OR h.price LIKE '%$search_query%')
  ";
 }
 else
 {
- $query = "SELECT h.place_id as place_id, h.placename as placename, h.placelocation as placelocation, h.mainimage as mainimage, h.price as price, t.place_desc as place_desc FROM home h JOIN travelinfo t ON h.place_id = t.place_id ORDER BY place_id ASC";
+ $query = "SELECT h.place_id as place_id, h.placename as placename, h.placelocation as placelocation, h.mainimage as mainimage, h.price as price, t.place_desc as place_desc 
+ FROM home h JOIN travelinfo t ON h.place_id = t.place_id ORDER BY place_id ASC";
 }
 
 $statement = $connect->prepare($query);

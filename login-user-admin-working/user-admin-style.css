@@ -30,3 +30,16 @@ tr {
   max-width: 20%;
   height: auto;
 }
+.review{
+padding: 20px;
+background-color: #EAC4B3; /*#2C595B;*/
+color: #21282D;
+}
+p.head{
+font-weight: bold;
+padding-left: 10px;
+}
+.review_text{
+padding: 20px;
+background-color: #ECCDBF;
+}
