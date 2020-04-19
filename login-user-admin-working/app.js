@@ -16,7 +16,7 @@ $routeProvider
 	.otherwise({redirectTo: '/'}); 
 });
 
-
+//login
 app.controller('login_register_controller', function($scope, $http,$location){
 
 $scope.closeMsg = function(){
@@ -90,6 +90,8 @@ $scope.submitLogin = function(){
 });
 //end of login-register app
 
+
+//search
 app.controller('live_search_controller', function($scope, $http, $location){
    $scope.redirectLogin = function(){
    $location.path("login");
@@ -134,8 +136,18 @@ app.controller('live_search_controller', function($scope, $http, $location){
  $scope.writeReview = function(place_id){
 	$location.path('review').search('place_id', place_id);
  };
+  $scope.closeMsg = function(){
+	$scope.alertMsg = false;
+  };
+   $scope.buyPlan = function(placename){
+	$scope.alertMsg = true;
+  $scope.alertClass = 'alert-success';
+  $scope.alertMessage = 'Payment for travel plan ' +placename + ' successful.';
+ };
 });
 
+
+//review
 app.controller('review_controller', function($scope, $http, $location){
    $scope.redirectLogin = function(){
    $location.path("login");
@@ -163,5 +175,7 @@ app.controller('review_controller', function($scope, $http, $location){
    $location.path("search").search('place_id', null);
   });
  };
+ 
+
  
 });

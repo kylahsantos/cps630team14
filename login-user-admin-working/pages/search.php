@@ -27,6 +27,10 @@
     </div>
    </div>
    <br />
+   <div class="alert {{alertClass}} alert-dismissible" ng-show="alertMsg">
+		<a href="#" class="close" ng-click="closeMsg()" aria-label="close">&times;</a>
+		{{alertMessage}}
+	</div>
    <div ng-hide="myValue" class="ng-hide">
 		<table class="table" style="text-align: center;">
 			<tr>
@@ -36,7 +40,7 @@
 			</tr>
 			<tr>
 				<td ng-repeat="data in searchData | filter :{'isSelected': 'true' }"  width="{{colWidth}}%">
-					${{ data.price }}
+					<a href="" ng-click="buyPlan(data.placename)">Buy Plan</a> ${{ data.price }} 
 				</td>
 			</tr>
 			<tr>
