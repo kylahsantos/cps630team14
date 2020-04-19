@@ -51,13 +51,15 @@
 			</tr>
 		</table>
 		<div></div>
-		<table class="table" style="text-align: center;">
+		<table class="table" style="text-align: left;">
 			<tr>
 				<td ng-repeat="data in searchData | filter :{'isSelected': 'true' }" width="{{colWidth}}%">
-					Reviews:
+					Reviews: <a href="" style="float: right" ng-click="writeReview(data.place_id)">(Write a review.)</a>
+					<div style="height: 200px; overflow: auto;">
 					<div class="review" ng-repeat="review in searchReviews | filter : { 'place_id': data.place_id }:true">
 						<p class = 'head'>{{review.rev_name}}<br>{{review.ranking}}/5</p>
 						<p class="review_text">{{ review.review }}</p>
+					</div>
 					</div>
 				</td>	
 			</tr>
@@ -86,7 +88,6 @@
      <a href="logout_user.php">Logout</a>
     </div>
    </div>
-  </div>
       <?php
    }
    ?>

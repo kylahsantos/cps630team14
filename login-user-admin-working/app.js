@@ -10,9 +10,9 @@ $routeProvider
 .when('/search', {
 	templateUrl : './pages/search.php', 
 	controller : 'live_search_controller'})   
-.when('/reviews', { 
-	templateUrl : './pages/reviews.html', 
-	controller : 'ReviewsController'})   
+.when('/review', { 
+	templateUrl : './pages/review.php', 
+	controller : 'review_controller'})   
 	.otherwise({redirectTo: '/'}); 
 });
 
@@ -131,9 +131,37 @@ app.controller('live_search_controller', function($scope, $http, $location){
   });
  };
  
+ $scope.writeReview = function(place_id){
+	$location.path('review').search('place_id', place_id);
+ };
+});
 
+app.controller('review_controller', function($scope, $http, $location){
+   $scope.redirectLogin = function(){
+   $location.path("login");
+ };
  
+  $scope.place_id = $location.search().place_id;
+  $scope.rating = 5;
+   $scope.fetchData = function(rev_name){
+	$scope.rev_name = rev_name;
+  $http({
+   method:"POST",
+   url:"user_fetch_data_reviews.php",
+   data:{place_id:$scope.place_id}
+  }).success(function(data){
+   $scope.place = data;
+  });
+  };
+  
+ $scope.postReview = function(){
+  $http({
+   method:"POST",
+   url:"post_review.php",
+   data:{place_id:$scope.place_id, rev_name:$scope.rev_name, review: $scope.review, ranking:$scope.rating}
+  }).success(function(data){
+   $location.path("search").search('place_id', null);
+  });
+ };
  
-
-
 });
