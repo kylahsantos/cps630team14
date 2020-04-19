@@ -113,8 +113,15 @@ app.controller('live_search_controller', function($scope, $http, $location){
   });
  };
  
- $scope.clickcheckbox = function(data){
- };
+$scope.checkedNumber = 0;
+  $scope.limitNumber = 2;
+  $scope.check = function(item) {
+    if (item.isSelected) {
+      $scope.checkedNumber++;
+    } else {
+      $scope.checkedNumber--;
+    }
+  };
  
  
 

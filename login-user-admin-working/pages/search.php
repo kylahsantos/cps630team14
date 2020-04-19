@@ -75,7 +75,7 @@
     </thead>
     <tbody>
     <tr ng-repeat="data in searchData" style = "background-color: #EAE1DE">
-      <td> <input type="checkbox" ng-model="data.isSelected"> </td>
+      <td> <input id="{{ data.id }}" type="checkbox" ng-model="data.isSelected" ng-click="check(data)" ng-disabled="!data.isSelected && checkedNumber === limitNumber"> </td>
       <td>{{ data.placename }}</td>
       <td>{{ data.placelocation }}</td>
       <td>{{ data.price }}</td>
