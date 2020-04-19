@@ -115,12 +115,20 @@ app.controller('live_search_controller', function($scope, $http, $location){
  
 $scope.checkedNumber = 0;
   $scope.limitNumber = 2;
+  $scope.colWidth = 100;
   $scope.check = function(item) {
     if (item.isSelected) {
       $scope.checkedNumber++;
     } else {
       $scope.checkedNumber--;
     }
+	if ($scope.checkedNumber == 2) {
+		$scope.colWidth=50;
+	}
+	else {
+		colWidth=100;
+	}
+		
   };
  
  

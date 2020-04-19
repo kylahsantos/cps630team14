@@ -30,32 +30,32 @@
    <div ng-hide="myValue" class="ng-hide">
 		<table class="table" style="text-align: center;">
 			<tr>
-				<td ng-repeat="data in searchData | filter :{'isSelected': 'true' }">
+   <td ng-repeat="data in searchData | filter :{'isSelected': 'true' }" width="{{colWidth}}%">
 					{{ data.placename }}
 				</td>
 			</tr>
 			<tr>
-				<td ng-repeat="data in searchData | filter :{'isSelected': 'true' }" >
+				<td ng-repeat="data in searchData | filter :{'isSelected': 'true' }"  width="{{colWidth}}%">
 					{{ data.placelocation }}
 				</td>
 			</tr>
 			<tr>
-				<td ng-repeat="data in searchData | filter :{'isSelected': 'true' }">
+				<td ng-repeat="data in searchData | filter :{'isSelected': 'true' }" width="{{colWidth}}%">
 					<img src= "{{ data.mainimage }}" style="display:block; max-height: 300px; margin-left: auto; margin-right: auto; max-width: 50%;"/>
 				</td>
 			</tr>
 			<tr>
-				<td ng-repeat="data in searchData | filter :{'isSelected': 'true' }">
+				<td ng-repeat="data in searchData | filter :{'isSelected': 'true' }" width="{{colWidth}}%">
 					{{ data.place_desc }}
 				</td>
 			</tr>
 			<tr>
-				<td ng-repeat="data in searchData | filter :{'isSelected': 'true' }">
+				<td ng-repeat="data in searchData | filter :{'isSelected': 'true' }" width="{{colWidth}}%">
 					Reviews:
 				</td>
 			</tr>
 			<tr>
-				<td ng-repeat="data in searchData | filter :{'isSelected': 'true' }">
+				<td ng-repeat="data in searchData | filter :{'isSelected': 'true' }" width="{{colWidth}}%">
 					<div class="review" ng-repeat="review in searchReviews | filter : { 'place_id': data.place_id }:true">
 						<p class = 'head'>{{review.rev_name}}<br>{{review.ranking}}/5</p>
 						<p class="review_text">{{ review.review }}</p>
