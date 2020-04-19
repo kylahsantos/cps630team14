@@ -30,13 +30,13 @@
    <div ng-hide="myValue" class="ng-hide">
 		<table class="table" style="text-align: center;">
 			<tr>
-   <td ng-repeat="data in searchData | filter :{'isSelected': 'true' }" width="{{colWidth}}%">
-					{{ data.placename }}
+				<td ng-repeat="data in searchData | filter :{'isSelected': 'true' }" width="{{colWidth}}%" style="font-weight: bold;">
+					{{ data.placename }} <br> {{ data.placelocation }}
 				</td>
 			</tr>
 			<tr>
 				<td ng-repeat="data in searchData | filter :{'isSelected': 'true' }"  width="{{colWidth}}%">
-					{{ data.placelocation }}
+					${{ data.price }}
 				</td>
 			</tr>
 			<tr>
@@ -49,13 +49,12 @@
 					{{ data.place_desc }}
 				</td>
 			</tr>
+		</table>
+		<div></div>
+		<table class="table" style="text-align: center;">
 			<tr>
 				<td ng-repeat="data in searchData | filter :{'isSelected': 'true' }" width="{{colWidth}}%">
 					Reviews:
-				</td>
-			</tr>
-			<tr>
-				<td ng-repeat="data in searchData | filter :{'isSelected': 'true' }" width="{{colWidth}}%">
 					<div class="review" ng-repeat="review in searchReviews | filter : { 'place_id': data.place_id }:true">
 						<p class = 'head'>{{review.rev_name}}<br>{{review.ranking}}/5</p>
 						<p class="review_text">{{ review.review }}</p>

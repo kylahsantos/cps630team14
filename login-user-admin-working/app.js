@@ -94,26 +94,8 @@ app.controller('live_search_controller', function($scope, $http, $location){
    $scope.redirectLogin = function(){
    $location.path("login");
  };
- $scope.checkboxNum = 0;
  
- $scope.fetchData = function(){
-  $http({
-   method:"POST",
-   url:"user_fetch_data.php",
-   data:{search_query:$scope.search_query}
-  }).success(function(data){
-   $scope.searchData = data;
-  });
-    $http({
-   method:"POST",
-   url:"user_fetch_reviews.php",
-   data:{search_query:$scope.search_query}
-  }).success(function(data){
-   $scope.searchReviews = data;
-  });
- };
- 
-$scope.checkedNumber = 0;
+ $scope.checkedNumber = 0;
   $scope.limitNumber = 2;
   $scope.colWidth = 100;
   $scope.check = function(item) {
@@ -130,6 +112,26 @@ $scope.checkedNumber = 0;
 	}
 		
   };
+  
+ $scope.fetchData = function(){
+  $scope.checkedNumber = 0; 
+  $http({
+   method:"POST",
+   url:"user_fetch_data.php",
+   data:{search_query:$scope.search_query}
+  }).success(function(data){
+   $scope.searchData = data;
+  });
+    $http({
+   method:"POST",
+   url:"user_fetch_reviews.php",
+   data:{search_query:$scope.search_query}
+  }).success(function(data){
+   $scope.searchReviews = data;
+  });
+ };
+ 
+
  
  
 
