@@ -11,7 +11,7 @@ We used XAMPP to host our website locally.
 
 NOTE:
 cps630 project db schema.sql - contains sql code needed to implement our databse and for our webpage to work
-*When selecting two countries after searching, the following three pairs show functionality for the plan portion of the assignment:
+*When selecting two countries after searching, the following three pairs show map functionality for the plan portion of the assignment:
 - aconcagua/great sphinx
 - cntower/chocolate hills
 - louvre/big ben
