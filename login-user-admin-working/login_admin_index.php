@@ -8,17 +8,23 @@ session_start();
  <head>
   <title>PLAN YOUR TRAVEL - ADMIN LOGIN</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-  <link href ="user-admin-style.css" type = "text/css" rel ="stylesheet">
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <style>
+  .form_style
+  {
+   width: auto;
+   margin: 0 auto;
+  }
+  </style>
  </head>
  <body>
   <br />
-  <img src="../images/banner.png" class = "center-block" id = "banner">
+   <h3 align="center">PLAN YOUR TRAVEL - ADMIN LOGIN</h3>
   <br />
 
   <div ng-app="liveApp" ng-controller="login_controller" class="container form_style">
    <?php
-   if(!isset($_SESSION["admin"]))
+   if(!isset($_SESSION["name"]))
    {
    ?>
    <div class="alert {{alertClass}} alert-dismissible" ng-show="alertMsg">
@@ -27,13 +33,13 @@ session_start();
    </div>
 
    <div class="panel panel-default" ng-show="login_form">
-    <div class="panel-heading" id ="bar">
-     <h3 class="panel-title">Admin Login</h3>
+    <div class="panel-heading">
+     <h3 class="panel-title">Login</h3>
     </div>
     <div class="panel-body">
      <form method="post" ng-submit="submitLogin()">
       <div class="form-group">
-       <label>Enter Your Username</label>
+       <label>Enter Your username</label>
        <input type="text" name="username" ng-model="loginData.username" class="form-control" />
       </div>
       <div class="form-group">
@@ -60,7 +66,7 @@ session_start();
 <h3 class="panel-title">WELCOME TO ADMIN MODE</h3>
 </div>
 <div class="panel-body">
-<h1>Welcome - <?php echo $_SESSION["admin"];?></h1>
+<h1>Welcome - <?php echo $_SESSION["name"];?></h1>
 
 <div class="container">
  <br />
