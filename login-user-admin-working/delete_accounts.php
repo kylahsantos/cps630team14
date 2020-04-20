@@ -2,7 +2,7 @@
 
 //delete.php
 
-include('db_connection.php');
+include('database_connection.php');
 
 $message = '';
 

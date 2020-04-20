@@ -2,7 +2,7 @@
 
 //select.php
 
-include('db_connection.php');
+include('database_connection.php');
 
 $query_accounts = "SELECT * FROM accounts ORDER BY id ASC";
 $statement = $connect->prepare($query_accounts);
