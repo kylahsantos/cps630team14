@@ -108,10 +108,28 @@ app.controller('live_search_controller', function($scope, $http, $location){
     }
 	if ($scope.checkedNumber == 2) {
 		$scope.colWidth=50;
+		$scope.arr = [];
+		angular.forEach($scope.searchData, function(value, key) {
+			if (value.isSelected){
+				$scope.arr.push(value.place_id);
+			}
+		});
+		$http({
+			method:"POST",
+			url:"user_fetch_data_map.php",
+			data:{place1_id:$scope.arr[0], place2_id:$scope.arr[1]}
+		}).success(function(data){
+			$scope.map = data[0].mapimage;
+		});
+		console.log($scope.map);
+		$scope.mapshow = true;
 	}
 	else {
 		colWidth=100;
+		$scope.mapshow = false;
 	}
+	
+
 		
   };
   
@@ -131,6 +149,7 @@ app.controller('live_search_controller', function($scope, $http, $location){
   }).success(function(data){
    $scope.searchReviews = data;
   });
+
  };
  
  $scope.writeReview = function(place_id){

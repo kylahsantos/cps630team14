@@ -54,7 +54,9 @@
 				</td>
 			</tr>
 		</table>
-		<div></div>
+		<div style="background-color: #FFFFFF">
+			<img src="{{ map }}" ng-show="mapshow" style="display:block; max-height: 300px; margin-left: auto; margin-right: auto;"/>
+		</div>
 		<table class="table" style="text-align: left;">
 			<tr>
 				<td ng-repeat="data in searchData | filter :{'isSelected': 'true' }" width="{{colWidth}}%">

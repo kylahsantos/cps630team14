@@ -358,6 +358,30 @@ INSERT INTO `users` (`id`, `username`, `fullname`, `address`, `telno`, `email`, 
 (3, 'testing', 'test', 'test', '1234567890', 'test@test.com', '$2y$10$2RAduCZ6QX5WQgEDd3f3O.r7urZi3HINiP.vLSB.FkKs32TboBEwK'),
 (4, 'test2', 'test2', 'test2', 'test2', 'test2@test2.com', '$2y$10$ulPN7OgSn5LI8/ASMWfHpOuTvTb9SxY/W0KmarIDHlytMmyMaLCLi');
 
+
+
+--
+-- Table structure for table `mappair`
+--
+
+CREATE TABLE `mappair` (
+  `map_id` int(11) PRIMARY KEY AUTO_INCREMENT,
+  `place1_id` int(11) NOT NULL,
+  `place2_id` int(11) NOT NULL,
+  `mapimage` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `mappair`
+--
+
+INSERT INTO `mappair` (`place1_id`, `place2_id`,`mapimage`) VALUES
+(3, 16, 'images/maps/0316.jpg'),
+(8, 20, 'images/maps/0820.jpg'),
+(10, 11, 'images/maps/1011.jpg');
+
+
+
 --
 -- Indexes for dumped tables
 --
