@@ -18,7 +18,7 @@ session_start();
 
   <div ng-app="liveApp" ng-controller="login_controller" class="container form_style">
    <?php
-   if(!isset($_SESSION["name"]))
+   if(!isset($_SESSION["admin"]))
    {
    ?>
    <div class="alert {{alertClass}} alert-dismissible" ng-show="alertMsg">
@@ -60,7 +60,7 @@ session_start();
 <h3 class="panel-title">WELCOME TO ADMIN MODE</h3>
 </div>
 <div class="panel-body">
-<h1>Welcome - <?php echo $_SESSION["name"];?></h1>
+<h1>Welcome - <?php echo $_SESSION["admin"];?></h1>
 
 <div class="container">
  <br />

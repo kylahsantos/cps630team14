@@ -40,7 +40,7 @@ if(empty($error))
    {
      if(strcmp($form_data->password, $row["password"]) == 0)
      {
-      $_SESSION["name"] = $row["username"];
+      $_SESSION["admin"] = $row["username"];
      }
     else
     {
