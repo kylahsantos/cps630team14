@@ -8,7 +8,10 @@ session_start();
  <head>
   <title>PLAN YOUR TRAVEL - ADMIN LOGIN</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <link href ="user-admin-style.css" type = "text/css" rel ="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
   .form_style
   {
@@ -195,7 +198,7 @@ app.controller('liveController', function($scope, $http){
     $scope.insertData = function(){
         $http({
             method:"POST",
-            url:"insert.php",
+            url:"insert_accounts.php",
             data:$scope.addData,
         }).success(function(data){
             $scope.success = true;
@@ -212,7 +215,7 @@ app.controller('liveController', function($scope, $http){
     $scope.editData = function(){
         $http({
             method:"POST",
-            url:"edit.php",
+            url:"edit_accounts.php",
             data:$scope.formData,
         }).success(function(data){
             $scope.success = true;
@@ -235,7 +238,7 @@ app.controller('liveController', function($scope, $http){
         {
             $http({
                 method:"POST",
-                url:"delete.php",
+                url:"delete_accounts.php",
                 data:{'id':id}
             }).success(function(data){
                 $scope.success = true;
